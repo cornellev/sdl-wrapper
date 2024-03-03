@@ -1,4 +1,4 @@
-# Copyright (C) 2023 Ethan Uppal. All rights reserved.
+# Copyright (C) 2023-4 Ethan Uppal. All rights reserved.
 
 SRCDIR		:= ./src
 INCLUDEDIR	:= ./src
