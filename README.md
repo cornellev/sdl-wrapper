@@ -2,6 +2,15 @@
 
 Ethan's wrapper around SDL for easier use.
 
+## Demo
+
+```shell
+git clone https://github.com/cornellev/sdl-wrapper.git
+cd sdl-wrapper
+make demo
+./demo
+```
+
 ## Usage
 
 The [demo code](src/demo) does a good job showing all the features.
@@ -26,3 +35,19 @@ window.present();
 All header files are well documented.
 Please read them for additional information.
 For example, [`geo/midpoint.h`](src/geo/midpoint.h) contains a circle-drawing primitive.
+
+**GUI**
+
+- [Windows](src/gui/window.h)
+- [Views](src/gui/view.h)
+
+**Geometry**
+
+- [Vectors](src/geo//vector.h)
+- [Circles](src/geo/circle.h)
+- [Midpoint Algorithm](src/geo/midpoint.h)
+
+**Utilities**
+
+- [Keyboard](src/util/keyboard.h)
+- [Logger](src/util/logger.h)

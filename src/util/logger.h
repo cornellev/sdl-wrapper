@@ -4,7 +4,13 @@
 
 #include <iostream>
 
-/** A wrapper around output logging. */
+/**
+ * A wrapper around output logging.
+ *
+ * @code
+ * Log << "test\n";
+ * @endcode
+ */
 class Logger {
     /** The output stream to log to. */
     std::ostream& out;
