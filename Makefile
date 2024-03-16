@@ -3,8 +3,7 @@
 SRCDIR		:= ./src
 INCLUDEDIR	:= ./src
 
-CC			:= $(shell which g++-13 || \
-					   which g++ || which clang)
+CC			:= $(shell which g++ || which clang)
 CFLAGS		:= -std=c++17 -pedantic -Wall -Wextra -I $(INCLUDEDIR)
 CDEBUG		:= -g
 CRELEASE	:= -O2 -DRELEASE_BUILD

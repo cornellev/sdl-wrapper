@@ -10,9 +10,15 @@ class Keyboard final {
     /** The states of each key as defined by SDL. */
     std::unordered_map<SDL_Keycode, bool> states;
 
+    /** Whether holding down a key should count as repeated presses. */
+    bool ignores_key_repeat;
+
 public:
-    /** Constructs a new keyboard tracker. */
-    Keyboard();
+    /** Constructs a new keyboard tracker.
+     *
+     * @param ignores_key_repeat Pass `true` to ignore key repeat.
+     */
+    Keyboard(bool ignores_key_repeat = false);
 
     /** Updates the keyboard with a new event given by `key_event`. It does not
      * necessarily have to be pre-checked to be a key-related event because the

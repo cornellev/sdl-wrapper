@@ -10,7 +10,6 @@
 class DemoView final : public View {
     Keyboard keyboard;
     uint8_t r, g, b;
-    bool space_down;
 
     void randomize_color();
 
