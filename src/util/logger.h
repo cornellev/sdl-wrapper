@@ -16,6 +16,8 @@ class Logger {
     std::ostream& out;
 
 public:
+    bool is_enabled = true;
+
     /** The global logger instance. */
     static Logger& main() {
         static Logger instance(std::cerr);
@@ -28,9 +30,11 @@ public:
     /** Logs `val`. */
     template<typename T>
     Logger& operator<<(T val) {
+        if (is_enabled) {
 #ifndef RELEASE_BUILD
-        out << val;
+            out << val;
 #endif
+        }
         return *this;
     }
 };
