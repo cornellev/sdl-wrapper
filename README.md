@@ -30,6 +30,8 @@ Finally, present the window, which is a blocking call.
 window.present();
 ```
 
+You can install the library to `/usr/local` with `sudo make install`, `sudo make uninstall`, and `sudo make reinstall`.
+
 ## Documentation
 
 All header files are well documented.
