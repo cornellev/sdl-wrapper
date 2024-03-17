@@ -9,12 +9,12 @@ I have made certain modifications
 
 void SDL_DrawCircle_Outline(SDL_Renderer* renderer, int32_t centreX,
     int32_t centreY, int32_t radius) {
-    if (centreX + radius < 0 || centreY + radius < 0) {
-        return;
-    }
-    if (centreX - radius > 700 || centreY - radius > 700) {
-        return;
-    }
+    // if (centreX + radius < 0 || centreY + radius < 0) {
+    //     return;
+    // }
+    // if (centreX - radius > 700 || centreY - radius > 700) {
+    //     return;
+    // }
 
     const int32_t diameter = (radius * 2);
 
