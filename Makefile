@@ -33,7 +33,7 @@ AR_OPT 	:= rcs $@ $^
 endif
 
 $(REALTARGET): $(OBJ)
-	$(AR) $(AR_OPT) $^ -o $@
+	$(AR) $(AR_OPT) $@ $^
 
 
 %.o: %.cpp
