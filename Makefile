@@ -26,15 +26,14 @@ DEPS 		:= $(OBJS:.o=.d)
 # Customizes ar for macOS
 ifeq ($(shell uname), Darwin)
 AR 		:= /usr/bin/libtool
-AR_OPT 	:= -static
+AR_OPT 	:= -static -o
 else
 AR 		:= ar
-AR_OPT 	:= rcs $@ $^
+AR_OPT 	:= rcs -o
 endif
 
 $(REALTARGET): $(OBJ)
 	$(AR) $(AR_OPT) $@ $^
-
 
 %.o: %.cpp
 	@echo 'Compiling $@'
