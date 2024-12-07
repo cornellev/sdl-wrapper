@@ -56,7 +56,7 @@ install: $(REALTARGET)
 	mkdir -p $(INSTLIB)
 	mkdir -p $(INSTHEA)
 	mv $(REALTARGET) $(INSTLIB)
-	cp -a -r $(SRCDIR) $(INSTHEA)/
+	cp -a $(SRCDIR) $(INSTHEA)/
 	mv $(INSTHEA)/$(SRCDIR)/* $(INSTHEA)/ 
 	chmod +rw $(INSTHEA)/gui 
 	chmod +rw $(INSTHEA)/gui/* 
