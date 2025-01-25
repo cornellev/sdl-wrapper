@@ -49,6 +49,7 @@ clean:
 demo: $(REALTARGET)
 	$(CC) $(CFLAGS) $(SRCDIR)/demo/demo_view.cpp $(SRCDIR)/demo/main.cpp -L. -l$(TARGET) -o demo
 
+.PHONY: install
 install: $(REALTARGET)
 	mv $(REALTARGET) $(REALTARGET).bak
 	make clean
@@ -61,10 +62,12 @@ install: $(REALTARGET)
 	chmod +rw $(INSTHEA)/gui 
 	chmod +rw $(INSTHEA)/gui/* 
 
+.PHONY: uninstall
 uninstall:
 	rm -r $(INSTLIB)/$(REALTARGET) \
 		$(INSTHEA)
 
+.PHONY: reinstall
 reinstall:
 	make uninstall
 	make install
